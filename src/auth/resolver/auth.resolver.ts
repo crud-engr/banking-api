@@ -2,7 +2,6 @@ import { UseGuards } from '@nestjs/common';
 import { Args, Context, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { User } from 'src/users/schemas/users.schemas';
 import { UserType } from 'src/users/type/users.type';
-import { GetUser } from '../get-user.decorator';
 import { AuthGuard } from '../guard/auth.guard';
 import { LoginInput } from '../input/login.input';
 import { SignupInput } from '../input/signup.input';
