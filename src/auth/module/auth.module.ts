@@ -3,14 +3,12 @@ import { JwtModule } from '@nestjs/jwt';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PassportModule } from '@nestjs/passport';
 import { Otp, OtpSchema } from 'src/otp/schema/otp.schema';
-import { UsersModule } from 'src/users/module/users.module';
 import { User, UserSchema } from 'src/users/schemas/users.schemas';
 import { AuthResolver } from '../resolver/auth.resolver';
 import { AuthService } from '../service/auth.service';
 
 @Module({
   imports: [
-    UsersModule,
     PassportModule.register({ defaultStrategy: "jwt" }),
     JwtModule.register({
       secret: "banking-api-backend-project",
