@@ -11,6 +11,8 @@ import { TransactionModule } from './transaction/module/transaction.module';
     MongooseModule.forRoot('mongodb://localhost:27017/banking', {useUnifiedTopology: true, useNewUrlParser: true}),
     GraphQLModule.forRoot({
       autoSchemaFile: true,
+      playground: true,
+      introspection: true,
       context: ({req}) => ({headers: req.headers})
     }),
     UsersModule,
