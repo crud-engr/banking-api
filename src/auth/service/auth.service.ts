@@ -2,11 +2,11 @@ import { ConflictException, Injectable, NotFoundException, Req, UnauthorizedExce
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import * as moment from "moment";
-import { User, UserDocument } from 'src/users/schemas/users.schemas';
+import { User, UserDocument } from '../../users/schemas/users.schemas';
 import * as bcrypt from "bcryptjs";
 import { SignupInput } from '../input/signup.input';
 import { LoginInput } from '../input/login.input';
-import { Otp, OtpDocument } from 'src/otp/schema/otp.schema';
+import { Otp, OtpDocument } from '../../otp/schema/otp.schema';
 import { JwtService } from '@nestjs/jwt';
 import { JwtPayload } from '../interface/jwt-payload.interface';
 
