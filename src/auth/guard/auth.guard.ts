@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
             const decoded = await jwt.verify(token, 'banking-api-backend-project');
             return decoded;
         } catch (error) {
-            throw new UnauthorizedException('Invalid token');
+            throw new UnauthorizedException('Invalid or expired token');
         }
     }
 }
